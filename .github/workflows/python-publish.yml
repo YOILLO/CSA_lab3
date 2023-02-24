@@ -22,5 +22,8 @@ jobs:
           pip install -U coverage
       - name: Run test
         run: |
-          ls -la
-          pytest
+          python3 -m coverage run -m pytest --verbose ./test.py
+      - name: Test print reports
+        run: |
+          find . -type f -name "*.py" | xargs -t python3-coverage report
+          find . -type f -name "*.py" | xargs -t pep8 --ignore=E501,E241
