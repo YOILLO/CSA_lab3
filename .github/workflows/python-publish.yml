@@ -22,4 +22,5 @@ jobs:
           pip install -U coverage
       - name: Run test
         run: |
+          ls -la
           pytest
