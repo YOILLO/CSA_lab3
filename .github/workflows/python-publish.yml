@@ -22,7 +22,7 @@ jobs:
           pip install -U coverage
       - name: Run test
         run: |
-          python3 -m coverage run -m pytest --verbose ./tests.py
+          python3 -m coverage run -m pytest --verbose
       - name: Test print reports
         run: |
           find . -type f -name "*.py" | xargs -t python3-coverage report
