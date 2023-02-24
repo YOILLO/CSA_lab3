@@ -1,5 +1,6 @@
 from constans import *
 
+
 class Processor:
     def __init__(self):
         self.r1: int = 0
