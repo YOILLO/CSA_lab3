@@ -103,5 +103,5 @@ ret - вернуться из функции
 |-----------------------------------|-------------|-----|-------------|--------|--------------------------------------------------------|
 | Кальвияйнен Ярослав Олегович  | task (prob2)    | 27  | 24          | 456    | asm , cisc, harv, hw, instr, binary, stream, mem, prob2 |
 | Кальвияйнен Ярослав Олегович  | echo            | 3  | 3          | 3    | asm , cisc, harv, hw, instr, binary, stream, mem, prob2 |
-| Кальвияйнен Ярослав Олегович  | function        | 36  | 27          | 38    | asm , cisc, harv, hw, instr, binary, stream, mem, prob2 |
+| Кальвияйнен Ярослав Олегович  | factorial        | 14  | 12          | 53    | asm , cisc, harv, hw, instr, binary, stream, mem, prob2 |
 
