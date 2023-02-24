@@ -2,6 +2,7 @@
 
 from constans import *
 
+
 def is_integer(n):
     try:
         int(n, 0)
@@ -34,9 +35,11 @@ commands = [['halt', 0, 0],
             ['call', 1, 1],
             ['ret', 0, 0]]
 
+
 def compile_error(line_num, message, code):
     print(f'Строка: {line_num}: {message}')
     exit(code)
+
 
 def from_str_to_reg_or_op_arg(str: str, num):
     if str == 'r1':
@@ -58,6 +61,7 @@ def from_str_to_reg_or_op_arg(str: str, num):
 
     return 2, int(str, 0)
 
+
 def from_str_to_op_arg(str: str, num):
     if str[0] == 'o':
         if not is_integer(str[1:]):
@@ -68,6 +72,7 @@ def from_str_to_op_arg(str: str, num):
         compile_error(num, 'Адресс не число', 6)
 
     return 2, int(str, 0)
+
 
 def from_str_to_reg_arg(str: str, num):
     if str == 'r1':
@@ -81,7 +86,8 @@ def from_str_to_reg_arg(str: str, num):
 
     compile_error(num, 'Указан не регистр', 7)
 
-def from_str_to_addr_arg(str:str, labels, num):
+
+def from_str_to_addr_arg(str: str, labels, num):
     if is_integer(str):
         return int(str, 0)
 
@@ -90,7 +96,6 @@ def from_str_to_addr_arg(str:str, labels, num):
             return lab[1]
 
     compile_error(num, 'Ошибочный адрес или метка', 8)
-
 
 
 def compile(input_file: str, output_file: str):

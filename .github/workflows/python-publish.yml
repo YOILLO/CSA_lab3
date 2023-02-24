@@ -27,4 +27,4 @@ jobs:
       - name: Test print reports
         run: |
           find . -type f -name "*.py" | xargs -t python3 -m coverage report
-          find . -type f -name "*.py" | xargs -t pep8 --ignore=E501,E241
+          find . -type f -name "*.py" | xargs -t pep8 --ignore=E501

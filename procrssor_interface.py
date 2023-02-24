@@ -4,13 +4,14 @@ import cu
 
 from constans import *
 
+
 def load_program(filename: str, control_unit: cu.ControlUnit):
     bytes = 0
     with open(filename, 'rb') as fl:
         bytes = fl.read()
 
     for i in range(MEMORY_SIZE):
-        control_unit.proc.commands_mem[i] = bytes[4*i] << 24 | bytes[4*i + 1] << 16 | bytes[4*i + 2] << 8 | bytes[4*i + 3]
+        control_unit.proc.commands_mem[i] = bytes[4 * i] << 24 | bytes[4 * i + 1] << 16 | bytes[4 * i + 2] << 8 | bytes[4 * i + 3]
 
 
 def add_input(inp: int, control_unit: cu.ControlUnit):
@@ -41,4 +42,3 @@ if __name__ == '__main__':
     with open(args.result, 'w') as f:
         f.write(str(control_unit.proc.output_queue) + " ticks: " + str(ticks) + "\n")
         f.write(trace)
-
